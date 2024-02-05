@@ -29,10 +29,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            // Limpeza ou ações adicionais, se necessário
-        }
-    }
 }

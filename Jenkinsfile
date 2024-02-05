@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    tages {
+    stages {
         stage('Checkout Source') {
            steps{
             git url:'https://github.com/lgouveia9/node-jenkins.git', branch:'main'

@@ -1,0 +1,14 @@
+version: '3.0'
+
+services:
+  web:
+    image: nome-do-seu-imagem:latest
+    deploy:
+      replicas: 3
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "3000:3000"

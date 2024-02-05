@@ -13,7 +13,7 @@ pipeline {
                 script {
                     // Construa e envie a imagem Docker
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-                        def customImage = docker.build("node-jenkins:latest")
+                        def customImage = docker.build("lgouveia/node-jenkins:latest")
                         customImage.push()
                     }
                 }

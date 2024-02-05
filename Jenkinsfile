@@ -23,7 +23,8 @@ pipeline {
         stage('Deploy to Swarm') {
             steps {
                 script {
-                    // Implante no Docker Swarm
+                    // Deploy no Docker Swarm
+                    sh 'docker stack rm node-jenkins_stack'  // Remove o Stack anterior, se existir
                     sh 'docker stack deploy -c docker-compose.yml node-jenkins'
                 }
             }

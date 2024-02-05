@@ -2,7 +2,7 @@ version: '3.0'
 
 services:
   web:
-    image: nome-do-seu-imagem:latest
+    image: lgouveia/node-jenkins:latest
     deploy:
       replicas: 3
       update_config:

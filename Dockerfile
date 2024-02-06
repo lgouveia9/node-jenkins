@@ -5,7 +5,7 @@ FROM node:14
 WORKDIR /app
 
 # Copie os arquivos de dependência
-COPY . ./
+COPY . /app/
 
 # Instale as dependências
 RUN npm install

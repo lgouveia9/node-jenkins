@@ -24,6 +24,7 @@ pipeline {
             steps {
                 script {
                     // Deploy no Docker Swarm
+                    sh 'docker network rm node-jenkins_default' // Remove network existente
                     sh 'docker stack rm node-jenkins_stack'  // Remove o Stack anterior, se existir
                     sh 'docker stack deploy -c docker-compose.yml node-jenkins'
                 }

@@ -25,6 +25,7 @@ pipeline {
                 script {
                     // Deploy no Docker Swarm 
                     sh 'docker stack rm node-jenkins'  // Remove o Stack anterior, se existir
+                    sh 'docker network create -d overlay node-jenkins'
                     sh 'docker stack deploy -c docker-compose.yml node-jenkins'
                 }
             }

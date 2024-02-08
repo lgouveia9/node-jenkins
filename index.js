@@ -3,7 +3,7 @@ const app = express();
 const port = 3300;
 
 app.get('/', (req, res) => {
-  res.send('Hello, DOCKER SWARM!');
+  res.send('Hello, DOCKER STACK DEPLOY IN DOCKER SWARM!');
 });
 
 app.listen(port, () => {

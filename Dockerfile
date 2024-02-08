@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Exponha a porta 3000 (ou a porta que seu aplicativo usa)
-EXPOSE 3000
+EXPOSE 3300
 
 # Comando de inicialização do aplicativo
 CMD ["npm", "start"]

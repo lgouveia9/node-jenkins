@@ -5,13 +5,13 @@ FROM node:14
 WORKDIR /app
 
 # Copie os arquivos de dependência
-COPY . /app/
+COPY . /app
 
 # Instale as dependências
 RUN npm install
 
 # Copie o código-fonte
-COPY . .
+#COPY . .
 
 # Exponha a porta 3000 (ou a porta que seu aplicativo usa)
 EXPOSE 3300
